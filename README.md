@@ -1,4 +1,23 @@
 # Project: Highly Available and Scalable Web Application
+## Version 1.1 - EC2 Setup / File Organization / Security Group Setup
+### Overview of Changes
+![Topology1.1]([AWS-Web-App.pdf](https://github.com/user-attachments/files/16755779/AWS-Web-App.pdf)
+
+### EC2 Instances and Security Group
+- **EC2 Instances:**
+  - Host web servers in the public subnets.
+  - Provisioned with an appropriate AMI and instance type.
+
+- **Security Group:**
+  - Name: `ec2_security`
+  - Description: Allow SSH, HTTP, and HTTPS inbound traffic.
+  - Ingress Rules:
+    - SSH (port 22) from `0.0.0.0/0`
+    - HTTP (port 80) from `0.0.0.0/0`
+    - HTTPS (port 443) from `0.0.0.0/0`
+  - Egress Rule:
+    - Allow all outbound traffic.
+
 ## Version 1.0 - VPC Setup
 ![Topology](https://github.com/user-attachments/assets/9c1fc67f-8d39-4dd3-8e02-d115002a0d15)
 ### Overview
