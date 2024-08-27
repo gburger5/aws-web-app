@@ -1,7 +1,7 @@
 # Project: Highly Available and Scalable Web Application
 ## Version 1.1 - EC2 Setup / File Organization / Security Group Setup
 ### Overview of Changes
-![Topology1.1]([AWS-Web-App.pdf](https://github.com/user-attachments/files/16755779/AWS-Web-App.pdf)
+![Topology1.1](https://github.com/user-attachments/files/16755779/AWS-Web-App.pdf)
 
 ### EC2 Instances and Security Group
 - **EC2 Instances:**
