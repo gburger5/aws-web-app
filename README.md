@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This project demonstrates a highly available and scalable web application deployed on AWS. The application uses Amazon EC2 instances behind an Elastic Load Balancer (ELB) to handle incoming traffic, along with Amazon RDS for relational database management. The architecture is designed to provide fault tolerance and scalability while utilizing Infrastructure as Code (IaC) with Terraform.
+This project demonstrates a PoC of a highly available and scalable web application architecture deployed on AWS. The application uses Amazon EC2 instances behind an Elastic Load Balancer (ELB) to handle incoming traffic, along with Amazon RDS for relational database management. The architecture is designed to provide fault tolerance and scalability while utilizing Infrastructure as Code (IaC) with Terraform.
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@ The architecture consists of:
 - **EC2 Instances**: Run the web application.
 - **Amazon RDS**: Manages the MySQL database.
 
-![Architecture Diagram](https://github.com/user-attachments/files/17036817/undefined.4.pdf)
+![Architecture Diagram](https://github.com/user-attachments/assets/14544ff0-6d4c-49e3-930e-135995412660)
 
 ## Setup
 
