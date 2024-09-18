@@ -1,50 +1,42 @@
-# Project: Highly Available and Scalable Web Application
-## Version 1.1 - EC2 Setup / File Organization / Security Group Setup
-### Overview of Changes
-![Topology1.1](https://github.com/user-attachments/assets/795e7f76-562d-449b-af75-9b5e62767933)
-### EC2 Instances and Security Group
-- **EC2 Instances:**
-  - Host web servers in the public subnets.
-  - Provisioned with an appropriate AMI and instance type.
+# Highly Available and Scalable Web Application
 
-- **Security Group:**
-  - Name: `ec2_security`
-  - Description: Allow SSH, HTTP, and HTTPS inbound traffic.
-  - Ingress Rules:
-    - SSH (port 22) from `0.0.0.0/0`
-    - HTTP (port 80) from `0.0.0.0/0`
-    - HTTPS (port 443) from `0.0.0.0/0`
-  - Egress Rule:
-    - Allow all outbound traffic.
+## Project Description
 
-## Version 1.0 - VPC Setup
-![Topology](https://github.com/user-attachments/assets/9c1fc67f-8d39-4dd3-8e02-d115002a0d15)
-### Overview
-This project sets up a Virtual Private Cloud (VPC) in AWS for a highly available and scalable web application. It includes public and private subnets, internet access, and routing components.
+This project demonstrates a highly available and scalable web application deployed on AWS. The application uses Amazon EC2 instances behind an Elastic Load Balancer (ELB) to handle incoming traffic, along with Amazon RDS for relational database management. The architecture is designed to provide fault tolerance and scalability while utilizing Infrastructure as Code (IaC) with Terraform.
 
-### VPC Configuration
-- **VPC CIDR Block:** `10.0.0.0/16`
-- **Region:** `us-east-1`
+## Table of Contents
 
-### Subnets
-- **Public Subnets:**
-  - CIDR: `10.0.1.0/24`, `10.0.2.0/24`
-  - Purpose: Host resources that require direct internet access (e.g., web servers).
+- [Features](#features)
+- [Architecture](#architecture)
+- [Setup](#setup)
+- [Technologies Used](#technologies-used)
 
-- **Private Subnets:**
-  - CIDR: `10.0.3.0/24`, `10.0.4.0/24`
-  - Purpose: Host resources that do not need direct internet access (e.g., databases).
+## Features
 
-### Routing
-- **Internet Gateway:** 
-  - Allows outbound traffic from public subnets to the internet.
-  
-- **NAT Gateway:**
-  - Provides internet access to resources in private subnets while keeping them secure.
+- **Load Balanced EC2 Instances**: Two EC2 instances behind an Elastic Load Balancer to distribute incoming traffic.
+- **Amazon RDS**: MySQL database hosted on Amazon RDS, accessible from the EC2 instances.
+- **Infrastructure as Code**: All resources provisioned using Terraform for easy management and reproducibility.
+- **Auto-scaling**: Implement auto-scaling for EC2 instances based on demand.
 
-- **Route Tables:**
-  - Public route table routes traffic from public subnets to the Internet Gateway.
-  - Private route tables route traffic from private subnets to the NAT Gateway.
+## Architecture
 
-### Conclusion
-This VPC setup serves as the foundation for deploying a scalable web application, ensuring both accessibility and security for the resources within.
+The architecture consists of:
+- **VPC**: A Virtual Private Cloud with public and private subnets in a Multi-AZ Deployment.
+- **Auto Scaling Group**: Creates EC2 Instances in the public subnets based on demand. 
+- **Elastic Load Balancer**: Distributes traffic among EC2 instances.
+- **EC2 Instances**: Run the web application.
+- **Amazon RDS**: Manages the MySQL database.
+
+![Architecture Diagram](https://github.com/user-attachments/files/17036817/undefined.4.pdf)
+
+## Setup
+
+1. **Coming Soon**: Creating Bash/Batch Scripts for Ease of Use.
+
+## Technologies Used
+
+- **Terraform**: For provisioning infrastructure.
+- **Amazon EC2**: Web instances.
+- **AWS ELB**: Application Load Balancer.
+- **Amazon RDS**: MySQL database.
+- **AWS Auto-Scaling Group**: For horizontally scaling web instances to meet demand.
