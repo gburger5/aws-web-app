@@ -27,7 +27,7 @@ The architecture consists of:
 - **EC2 Instances**: Run the web application.
 - **Amazon RDS**: Manages the MySQL database.
 
-![Architecture Diagram](https://github.com/user-attachments/assets/14544ff0-6d4c-49e3-930e-135995412660)
+![Architecture Diagram](https://github.com/user-attachments/assets/235c3835-8981-4f63-a120-e6f0ec754dcb)
 
 ## Setup
 
