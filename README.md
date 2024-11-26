@@ -31,7 +31,7 @@ The architecture consists of:
 
 ## Setup
 
-1. **Coming Soon**: Creating Bash/Batch Scripts for Ease of Use.
+1. **Coming Soon**: Updating for Microservices.
 
 ## Technologies Used
 
